@@ -60,3 +60,47 @@ config  0.000GB
 local   0.000GB
 >
 ```
+
+## Using MongoDB in a Shell
+### Createa  db called demo
+### Create a couple collections. A collection is like a table in SQL
+
+```
+> use demo
+switched to db demo
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> use demo
+switched to db demo
+> db.cars.insert({brand: "BMW"})
+WriteResult({ "nInserted" : 1 })
+> show dbs
+admin   0.000GB
+config  0.000GB
+demo    0.000GB
+local   0.000GB
+> db.cars.insert({brand: "Subaru"})
+WriteResult({ "nInserted" : 1 })
+> show collections
+cars
+> db.cars.find()
+{ "_id" : ObjectId("5dfe631ac9659ea136478737"), "brand" : "BMW" }
+{ "_id" : ObjectId("5dfe6331c9659ea136478738"), "brand" : "Subaru" }
+> for (i = 0; i < 20000; i++) {
+... db.mydata.insert(
+... {"number": i}
+... )
+... }
+WriteResult({ "nInserted" : 1 })
+> show collections
+cars
+mydata
+> db.mydata.count()
+20000
+> db.mydata.find({"number": 2})     
+{ "_id" : ObjectId("5dfe643cc9659ea13647873b"), "number" : 2 }
+>
+
+```
