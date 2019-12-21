@@ -29,3 +29,34 @@ Looks a lot like Javascript...
 - Drivers for most languages
   - C/C++, C#, Java, Node.js, Perl, PHP, Python, Ruby, Scala
 
+### To Install on Windows
+Browse to mongodb download community
+Select Server
+Download button
+use defaults in most cases
+be sure to install compass -- similar to phpMyAdmin
+
+
+### Configure
+Create the data dir
+```
+mkdir \data
+```
+
+Add the mongo install area to your path
+```
+C:\Program Files\MongoDB\Server\4.2\bin
+```
+
+### Try some basic commands
+#### Start the server, then run the CLI
+```
+mongod --dbpath data
+mongo
+> show dbs
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+>
+```
