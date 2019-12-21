@@ -104,3 +104,29 @@ mydata
 >
 
 ```
+
+### Insert lots of data at once
+```
+use <dbname>
+db.users.insertMany( <json structure> );
+db.users.find().pretty()
+db.users.find().count()
+db.users.count()
+```
+
+### Importing from a file
+```
+$ ls
+data  Notes  posts.json  products.json  README.md  users.json
+$ mongoimport --db demotest --collection posts --jsonArray --file posts.json
+2019-12-21T15:33:46.686-0600    connected to: mongodb://localhost/
+2019-12-21T15:33:46.717-0600    100 document(s) imported successfully. 0 document(s) failed to import.
+
+$ mongo
+> use demotest
+switched to db demotest
+> show collections
+posts
+users
+>
+ ```
