@@ -1,0 +1,78 @@
+[
+
+{
+	"_id" : ObjectId("5db85a39162e7629e4abb644"),
+	"results" : [
+		{
+			"product" : "abc",
+			"score" : 10
+		},
+		{
+			"product" : "cde",
+			"score" : 3
+		}
+	]
+},
+{
+	"_id" : ObjectId("5db85c31162e7629e4abb645"),
+	"results" : [
+		{
+			"product" : "efg",
+			"score" : 50
+		},
+		{
+			"product" : "xyz",
+			"score" : 200
+		}
+	]
+},
+{
+	"_id" : ObjectId("5db85d73162e7629e4abb646"),
+	"results" : [
+		{
+			"product" : "sdfs",
+			"score" : 300
+		},
+		{
+			"product" : "gfdg",
+			"score" : 500
+		}
+	]
+},
+{
+	"_id" : ObjectId("5db8606462fd07b1866edf2d"),
+	"results" : [
+		{
+			"product" : "racketball",
+			"score" : 2000
+		},
+		{
+			"product" : "hammer",
+			"score" : 5000
+		}
+	]
+},
+{
+	"_id" : ObjectId("5db86234b1d8d1549a586d93"),
+	"results" : [
+		{
+			"product" : "baseball",
+			"score" : 345
+		},
+		{
+			"product" : "stapler",
+			"score" : 455
+		}
+	]
+},
+{
+	"_id" : ObjectId("5db8669eb1d8d1549a586d94"),
+	"results" : [
+		{
+			"product" : "Sauna",
+			"price" : 34
+		}
+	]
+}
+
+]

@@ -128,5 +128,9 @@ switched to db demotest
 > show collections
 posts
 users
+> db.posts.count() 
+100
+> db.users.count()
+10
 >
  ```
