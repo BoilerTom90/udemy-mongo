@@ -217,3 +217,29 @@ db.collection.remove()
 { "_id" : ObjectId("5dffb589abd16d07211f0d15"), "name" : "charlie" }
 >
 ```
+
+### How to use the find with dot notation
+```
+> db.users.find({name: "Tom"}).pretty()
+{
+        "_id" : ObjectId("5e00e0884654ad44d9566ee3"),
+        "name" : "Tom",
+        "phone" : {
+                "areaCode" : "224"
+        },
+        "ratings" : {
+                "_id" : 3,
+                "rating" : 300
+        }
+}
+
+> db.users.findOne({name: "Tom"}).name
+Tom
+> db.users.findOne({name: "Tom"}).ratings
+{ "_id" : 3, "rating" : 300 }
+> db.users.findOn
+e({name: "Tom"}).ratings.rating
+300
+>
+
+```
